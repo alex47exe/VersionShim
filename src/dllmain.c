@@ -16,9 +16,9 @@ BOOL APIENTRY DllMain(CONST HMODULE hModule, CONST DWORD fdwReason, CONST LPVOID
     LPSTR fileStr = NULL;
     DWORD fileLen = 0;
 
-    if (!OpenReadFileUtf8("libraries.txt", &fileStr, &fileLen))
+    if (!OpenReadFileUtf8("version.lib.txt", &fileStr, &fileLen))
     {
-        MessageBoxA(NULL, "Failed to read libraries.txt", PROJECT_NAME, ErrBoxType);
+        MessageBoxA(NULL, "Failed to read version.lib.txt", PROJECT_NAME, ErrBoxType);
         return TRUE;
     }
 
